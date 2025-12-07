@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yozef Zemen - Personal Portfolio</title>
+    <style>
+        /* styles.css content embedded */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 70px;
+            height: 65px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        .logo {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #555;
+            border-radius: 5px;
+            transform: scale(1.1);
+            animation: pulse 0.5s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1.1); }
+        }
+
+        .section {
+            padding: 100px 0 50px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .home {
+            background-color: #007bff; /* Blue */
+            color: #fff;
+        }
+
+        .about {
+            background-color: #28a745; /* Green */
+            color: #fff;
+        }
+
+        .skills {
+            background-color: #ffc107; /* Yellow */
+            color: #333;
+        }
+
+        .projects {
+            background-color: #dc3545; /* Red */
+            color: #fff;
+        }
+
+        .contact {
+            background-color: #6f42c1; /* Purple */
+            color: #fff;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: inherit;
+            margin: 10px auto;
+            padding: 10px;
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .project a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact-form input, #contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact-form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #contact-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo-container">
+                    <img src="Yosief.jpg" alt="Yozef Zemen Profile" class="profile-img">
+                    <h1 class="logo">Yozef Zemen</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section home">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hi, I'm Yozef Zemen, a passionate web developer. Explore my work and get in touch!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm Yosief Zemene, i am a computer science student in wachwmo unniversty,  I specialize in building modern web applications using HTML, CSS, and JavaScript. My goal is to create user-friendly and efficient digital experiences.</p>
+         
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Responsive Web Design</li>
+                <li>Fundamental Database (e.g., MySQL)</li>
+                <li>Networking</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Web Development</li>
+                <li>[Add more skills, e.g., React.js, Node.js, Git]</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1: [Project Name]</h3>
+                <p>[Description: A brief overview of the project, technologies used, and your role.]</p>
+                <a href="[Link to project or GitHub]">View Project</a>
+            </div>
+            <div class="project">
+                <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Responsive Web Design</li>
+                <li>Fundamental Database (e.g., MySQL)</li>
+                <li>Networking</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Web Development</li>
+             
+            </ul>            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+             <h2>Contact Me</h2>
+            <p>Email: yosefzemene9@gmail.com</p>
+            <p>Phone: 0984018947</p>
+            <p>Telegram:@onjo360<p>
+   
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yozef Zemen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // script.js content embedded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for navbar links
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Basic form submission handling (placeholder - in real use, connect to backend)
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Message sent! (This is a placeholder - implement actual submission logic.)');
+                form.reset();
+            });
+
+            // Animation: Fade-in sections on scroll
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
